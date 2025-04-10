@@ -23,7 +23,24 @@
 #         for subsubitem in subitem.split(";"):
 #             print(subsubitem)
 
-a = ['a', 'b', 'c']
-print(*a)
-print(a[0], a[1], a[2])
-print('miau')
+# a = ['a', 'b', 'c']
+# print(*a)
+# print(a[0], a[1], a[2])
+# print('miau')
+
+# cviceni: samohlasky a souhlasky
+samohlasky = 'aeiouáéíóú'
+souhlasky = 'bcčdďfghjklmnňprřsštťvzžcdž'
+vysledky = {'souhlasky': 0, 'samohlasky': 0}
+veta = 'Zvuk řeči je produkován otevřenou konfigurací vokálního traktu'
+for znak in veta.lower():
+    if znak.isalpha():
+        if samohlasky.find(znak) != -1:
+            vysledky['samohlasky'] += 1
+            #print(znak, vysledky)
+        else:
+            vysledky['souhlasky'] += 1
+            #print(znak, vysledky)
+    #else:
+        #print(f"Znak je \'{znak}\'")
+print(f"Počet souhlásek: {vysledky['souhlasky']} | Počet samohlásek: {vysledky['samohlasky']}")
