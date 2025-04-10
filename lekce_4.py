@@ -26,3 +26,4 @@
 a = ['a', 'b', 'c']
 print(*a)
 print(a[0], a[1], a[2])
+print('miau')
